@@ -17,6 +17,9 @@ const reducerLogin = (state = INITIAL_STATE, action: ReducerLogin) => {
         email: action.payload.email,
         user: action.payload.user,
       }
+
+      default:
+        return state;
   }
 }
 
