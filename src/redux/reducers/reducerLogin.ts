@@ -1,26 +1,24 @@
 const INITIAL_STATE = {
   email: '',
-  user: '',
-}
+};
 
 interface ReducerLogin {
-  action: (param: any) => any;
+  action: () => any;
   type: string;
-  payload: {email: string, user: string};
+  payload: { email: string; user: string };
 }
 
 const reducerLogin = (state = INITIAL_STATE, action: ReducerLogin) => {
-  switch(action.type){
+  switch (action.type) {
     case 'ACTION_LOGIN':
       return {
         ...state,
         email: action.payload.email,
-        user: action.payload.user,
-      }
+      };
 
-      default:
-        return state;
+    default:
+      return state;
   }
-}
+};
 
 export default reducerLogin;
