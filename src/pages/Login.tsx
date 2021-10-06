@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import loginWallet from '../images/wallet.svg';
 
-function Login() {
+function Login(): unknown {
   const [email, setEmail] = useState<string>('');
 
   return (
@@ -11,10 +11,14 @@ function Login() {
           <div className="column is-4 is-offset-4">
             <h3 className="title has-text-black">Login</h3>
             <hr className="login-hr" />
-            <p className="subtitle has-text-black">Please login to proceed.</p>
+            <p className="subtitle has-text-black">Please login to procee.</p>
             <div className="box">
               <figure className="avatar">
-                <img style={{ width: '130px' }} src={loginWallet} alt="login wallet" />
+                <img
+                  style={{ width: '130px' }}
+                  src={loginWallet}
+                  alt="login wallet"
+                />
               </figure>
               <form>
                 <div className="field">
@@ -37,9 +41,11 @@ function Login() {
                     />
                   </div>
                 </div>
-                <button className="button is-block is-info is-large is-fullwidth">
+                <button
+                  type="button"
+                  className="button is-block is-info is-large is-fullwidth"
+                >
                   Login
-                  {' '}
                   <i className="fa fa-sign-in" aria-hidden="true" />
                 </button>
               </form>
