@@ -1,12 +1,19 @@
 import React, { useState, FunctionComponent, ReactElement } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import loginWallet from '../images/wallet.svg';
 import actionLogin from '../redux/actions';
 
 const Login: FunctionComponent = (): ReactElement => {
   const [email, setEmail] = useState<string>('');
+  const history = useHistory();
   const [password, setPassword] = useState<string>('');
   const dispatch = useDispatch();
+
+  const onClickLogin = (): void => {
+    dispatch(actionLogin(email));
+    history.push('/carteira');
+  };
 
   const validateEmailAndPassword = (): boolean => {
     const validationEmail = /(.*)@(.*).com/;
@@ -60,7 +67,7 @@ const Login: FunctionComponent = (): ReactElement => {
                   type="button"
                   className="button is-block is-info is-large is-fullwidth"
                   disabled={validateEmailAndPassword()}
-                  onClick={() => dispatch(actionLogin(email))}
+                  onClick={() => onClickLogin()}
                 >
                   Login
                   <i className="fa fa-sign-in" aria-hidden="true" />
