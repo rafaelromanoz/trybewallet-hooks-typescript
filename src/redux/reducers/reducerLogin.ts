@@ -2,13 +2,19 @@ const INITIAL_STATE = {
   email: '',
 };
 
-interface ReducerLogin {
-  action: () => any;
-  type: string;
-  payload: { email: string; user: string };
+type TReducerLogin = {
+  type: string,
+  payload: {
+    email: string,
+  }
 }
 
-const reducerLogin = (state = INITIAL_STATE, action: ReducerLogin) => {
+type TInicialState = {
+  email: string,
+}
+
+const reducerLogin = (state: TInicialState = INITIAL_STATE,
+  action: TReducerLogin): {email: string} => {
   switch (action.type) {
     case 'ACTION_LOGIN':
       return {
