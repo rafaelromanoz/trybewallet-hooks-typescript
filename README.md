@@ -120,11 +120,6 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -228,4 +223,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
 
