@@ -20,7 +20,7 @@ const Header: React.FC = (): ReactElement => {
         <h1 className="navbar-item title">TrybeWallet</h1>
       </div>
       <div className="navbar-menu">
-        <h3 className="subtitle is-4 navbar-item ">Total é 0</h3>
+        <h3 className="subtitle is-4 navbar-item ">Total de despesas:</h3>
       </div>
       <div className="navbar-menu">
         <p className="navbar-item navbar-end">{`Email: ${email}`}</p>

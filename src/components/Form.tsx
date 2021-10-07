@@ -1,4 +1,7 @@
-import React, { Dispatch, ReactElement, SetStateAction } from 'react';
+import React, {
+  Dispatch, PropsWithChildren,
+  ReactElement, SetStateAction,
+} from 'react';
 
 type TPropsFromWallet = {
   estados: {
@@ -10,15 +13,22 @@ type TPropsFromWallet = {
   },
   currency: {
   },
+  onClickAdd: PropsWithChildren<()=> void>;
 }
 
-const Form: React.FC<TPropsFromWallet> = ({ estados, currency }): ReactElement => {
+const Form: React.FC<TPropsFromWallet> = ({
+  estados,
+  currency,
+  onClickAdd,
+}): ReactElement => {
   const {
     setCurrency, setValue, setDescription, setMethod, setTag,
   } = estados;
+  const method: Array<string> = ['Dinheiro', 'Cartão de Crédito', 'Cartão de débito'];
+  const tag: Array<string> = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
   return (
     <div>
-      <form className="field">
+      <form className="level-left">
         <label className="label" htmlFor="value">
           Valor
           <div className="control">
@@ -31,45 +41,77 @@ const Form: React.FC<TPropsFromWallet> = ({ estados, currency }): ReactElement =
           </div>
         </label>
         <div className="field">
-          <label className="label" htmlFor="description">
+          <label className="label" htmlFor="description" style={{ marginTop: '5px' }}>
             Descrição
-            <input
-              className="input"
-              type="text"
-              name="description"
-              onChange={({ target }) => setDescription(target.value)}
-            />
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                name="description"
+                onChange={({ target }) => setDescription(target.value)}
+              />
+            </div>
           </label>
         </div>
-        <label htmlFor="currency">
-          Moeda
-          <select name="currency" onChange={({ target }) => setCurrency(target.value)}>
-            {Object.keys(currency)
-              .filter((element) => element !== 'USDT')
-              .map((element) => (
-                <option>{element}</option>
-              ))}
-          </select>
-        </label>
-        <label htmlFor="method">
-          Método de pagamento
-          <select name="method" onChange={({ target }) => setMethod(target.value)}>
-            <option>Dinheiro</option>
-            <option>Cartão de crédito</option>
-            <option>Cartão de débito</option>
-          </select>
-        </label>
-        <label htmlFor="tag">
-          Tag
-          <select name="tag" onChange={({ target }) => setTag(target.value)}>
-            <option>Alimentação</option>
-            <option>Lazer</option>
-            <option>Trabalho</option>
-            <option>Transporte</option>
-            <option>Saúde</option>
-          </select>
-        </label>
+        <div className="field">
+          <label htmlFor="asad" className="label" style={{ marginTop: '5px' }}>
+            Moeda
+            <div className="control">
+              <div className="select">
+                <select
+                  name="currency"
+                  onChange={({ target }) => setCurrency(target.value)}
+                >
+                  {Object.keys(currency)
+                    .filter((element) => element !== 'USDT')
+                    .map((element) => (
+                      <option>{element}</option>
+                    ))}
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <label htmlFor="asad" className="label" style={{ marginTop: '5px' }}>
+            Método de pagamento
+            <div className="control">
+              <div className="select">
+                <select
+                  onChange={({ target }) => setMethod(target.value)}
+                >
+                  {method.map((element) => (
+                    <option>{element}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <label htmlFor="asad" className="label" style={{ marginBottom: '8px' }}>
+            Tag
+            <div className="control">
+              <div className="select">
+                <select
+                  onChange={({ target }) => setTag(target.value)}
+                >
+                  {tag.map((element) => (
+                    <option>{element}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
       </form>
+      <button
+        type="button"
+        className="button is-primary"
+        onClick={() => onClickAdd()}
+      >
+        Adicionar despesa
+      </button>
     </div>
   );
 };

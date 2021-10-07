@@ -1,6 +1,8 @@
 import React, {
   ReactElement, useState, useEffect, Dispatch, SetStateAction,
 } from 'react';
+import { useDispatch } from 'react-redux';
+import { addExpenses } from '../redux/actions';
 import Header from '../components/Header';
 import fetchApi from '../services/fetch';
 import gifWallet from '../images/gifWallet.gif';
@@ -14,12 +16,28 @@ const Wallet: React.FC = (): ReactElement => {
   const [currency, setCurrency] = useState<string>('');
   const [method, setMethod] = useState('');
   const [tag, setTag] = useState('');
+  const dispatch = useDispatch();
   const onStartPage = async (): Promise<void> => {
     setData(await fetchApi());
   };
   useEffect(() => {
     onStartPage();
   }, []);
+
+  const objExpenses = {
+    value,
+    id,
+    description,
+    currency,
+    data,
+    method,
+    tag,
+  };
+
+  const onClickAddExpenses = (): void => {
+    setId((prevState) => (prevState + 1));
+    dispatch(addExpenses(objExpenses));
+  };
 
   type TSetToState = {
     setValue: Dispatch<SetStateAction<number>>,
@@ -47,7 +65,7 @@ const Wallet: React.FC = (): ReactElement => {
   return (
     <div>
       <Header />
-      <Form estados={setToState} currency={data} />
+      <Form estados={setToState} currency={data} onClickAdd={onClickAddExpenses} />
     </div>
   );
 };
