@@ -25,7 +25,6 @@ const reducerLogin = (state: InitialState = INITIAL_STATE,
         expenses: [...state.expenses, action.payload.expenses],
       };
     case 'DELETE_EXPENSES':
-      console.log(action.id);
       return {
         ...state,
         expenses: state.expenses

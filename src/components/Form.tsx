@@ -96,7 +96,7 @@ const Form: React.FC<TPropsFromWallet> = ({
                   onChange={({ target }) => setTag(target.value)}
                 >
                   {tag.map((element) => (
-                    <option>{element}</option>
+                    <option key={element}>{element}</option>
                   ))}
                 </select>
               </div>

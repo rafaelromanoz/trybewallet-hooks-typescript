@@ -39,7 +39,7 @@ const Table: React.FC = (): ReactElement => {
       </thead>
       <tbody>
         {expenses.map((element: RootStateOrAny) => (
-          <tr>
+          <tr key={element.id}>
             <td>{element.value}</td>
             <td>{element.description}</td>
             <td>{element.currency}</td>
