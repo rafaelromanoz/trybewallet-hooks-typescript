@@ -1,3 +1,5 @@
+import { RootStateOrAny } from 'react-redux';
+
 const INITIAL_STATE = {
   expenses: [],
 };
@@ -9,8 +11,9 @@ type InitialState = {
 type ActionPayload = {
   type: string,
   payload: {
-    expenses: Array<[]>
+    expenses: Array<[]>,
   }
+  id: number,
 }
 
 const reducerLogin = (state: InitialState = INITIAL_STATE,
@@ -20,6 +23,13 @@ const reducerLogin = (state: InitialState = INITIAL_STATE,
       return {
         ...state,
         expenses: [...state.expenses, action.payload.expenses],
+      };
+    case 'DELETE_EXPENSES':
+      console.log(action.id);
+      return {
+        ...state,
+        expenses: state.expenses
+          .filter((element: RootStateOrAny) => element.id !== action.id),
       };
     default:
       return state;

@@ -5,6 +5,11 @@ const actionLogin = (email: string): {type: string, payload: {email: string}} =>
   },
 });
 
+export const actionDelete = (id:number): {type: string, id:number} => ({
+  type: 'DELETE_EXPENSES',
+  id,
+});
+
 type TExpenses = {
   value: number,
   id: number,

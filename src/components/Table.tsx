@@ -1,12 +1,21 @@
 import React, { ReactElement } from 'react';
 import {
-  RootStateOrAny, useSelector, connect, shallowEqual,
+  RootStateOrAny, useSelector, connect, shallowEqual, useDispatch,
 } from 'react-redux';
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
+import toast from 'react-hot-toast';
+import { actionDelete } from '../redux/actions';
 
 const Table: React.FC = (): ReactElement => {
   const { expenses } = useSelector((state:RootStateOrAny) => state.reducerWallet,
     shallowEqual);
+  const dispatch = useDispatch();
+  const deleteNotify = (): string => toast.error('Despesa excluida');
+  const onClickDelete = (id: number): void => {
+    dispatch(actionDelete(id));
+    deleteNotify();
+  };
+
   if (expenses.length === 0) {
     return (
       <h3>Não possui despesas cadastradas</h3>
@@ -44,7 +53,11 @@ const Table: React.FC = (): ReactElement => {
               <button type="button" className="button is-warning">
                 <AiOutlineEdit />
               </button>
-              <button type="button" className="button is-danger">
+              <button
+                type="button"
+                onClick={() => onClickDelete(element.id)}
+                className="button is-danger"
+              >
                 <AiOutlineDelete />
               </button>
             </div>
