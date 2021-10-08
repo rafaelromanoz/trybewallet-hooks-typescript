@@ -12,7 +12,6 @@ const Table: React.FC = (): ReactElement => {
       <h3>Não possui despesas cadastradas</h3>
     );
   }
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   return (
     <table className="table">
       <thead>
