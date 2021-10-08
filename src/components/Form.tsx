@@ -1,6 +1,5 @@
 import React, {
-  Dispatch, PropsWithChildren,
-  ReactElement, SetStateAction,
+  Dispatch, PropsWithChildren, ReactElement, SetStateAction,
 } from 'react';
 
 type TPropsFromWallet = {
@@ -89,7 +88,7 @@ const Form: React.FC<TPropsFromWallet> = ({
           </label>
         </div>
         <div className="field">
-          <label htmlFor="asad" className="label" style={{ marginBottom: '8px' }}>
+          <label htmlFor="asad" className="label" style={{ marginTop: '6px' }}>
             Tag
             <div className="control">
               <div className="select">
@@ -104,14 +103,15 @@ const Form: React.FC<TPropsFromWallet> = ({
             </div>
           </label>
         </div>
+        <button
+          type="button"
+          className="button is-primary"
+          onClick={() => onClickAdd()}
+          style={{ marginLeft: '17px', marginTop: '15px' }}
+        >
+          Adicionar despesa
+        </button>
       </form>
-      <button
-        type="button"
-        className="button is-primary"
-        onClick={() => onClickAdd()}
-      >
-        Adicionar despesa
-      </button>
     </div>
   );
 };

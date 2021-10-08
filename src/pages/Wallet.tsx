@@ -1,9 +1,11 @@
 import React, {
   ReactElement, useState, useEffect, Dispatch, SetStateAction,
 } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { addExpenses } from '../redux/actions';
 import Header from '../components/Header';
+import Table from '../components/Table';
 import fetchApi from '../services/fetch';
 import gifWallet from '../images/gifWallet.gif';
 import Form from '../components/Form';
@@ -17,6 +19,7 @@ const Wallet: React.FC = (): ReactElement => {
   const [method, setMethod] = useState('');
   const [tag, setTag] = useState('');
   const dispatch = useDispatch();
+  const notify = (): string => toast.success('Despesa adicionada com sucesso');
   const onStartPage = async (): Promise<void> => {
     setData(await fetchApi());
   };
@@ -37,6 +40,7 @@ const Wallet: React.FC = (): ReactElement => {
   const onClickAddExpenses = (): void => {
     setId((prevState) => (prevState + 1));
     dispatch(addExpenses(objExpenses));
+    notify();
   };
 
   type TSetToState = {
@@ -65,7 +69,9 @@ const Wallet: React.FC = (): ReactElement => {
   return (
     <div>
       <Header />
+      <Toaster position="top-right" />
       <Form estados={setToState} currency={data} onClickAdd={onClickAddExpenses} />
+      <Table />
     </div>
   );
 };
