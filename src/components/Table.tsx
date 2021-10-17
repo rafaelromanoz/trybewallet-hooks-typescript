@@ -4,7 +4,7 @@ import {
 } from 'react-redux';
 import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai';
 import toast from 'react-hot-toast';
-import { actionDelete } from '../redux/actions';
+import { actionDelete, actEdit } from '../redux/actions';
 
 const Table: React.FC = (): ReactElement => {
   const { expenses } = useSelector((state:RootStateOrAny) => state.reducerWallet,
@@ -14,6 +14,9 @@ const Table: React.FC = (): ReactElement => {
   const onClickDelete = (id: number): void => {
     dispatch(actionDelete(id));
     deleteNotify();
+  };
+  const onClickEdit = (id: number): void => {
+    dispatch(actEdit(id));
   };
 
   if (expenses.length === 0) {
@@ -50,7 +53,11 @@ const Table: React.FC = (): ReactElement => {
             <td>{(element.data[element.currency].ask * element.value).toFixed(2)}</td>
             <td>Real</td>
             <div style={{ marginLeft: '15px' }}>
-              <button type="button" className="button is-warning">
+              <button
+                type="button"
+                className="button is-warning"
+                onClick={() => onClickEdit(element.id)}
+              >
                 <AiOutlineEdit />
               </button>
               <button

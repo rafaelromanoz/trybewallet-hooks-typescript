@@ -28,4 +28,9 @@ export const addExpenses = (expenses:
   },
 });
 
+export const actEdit = (id: number): {type: string, id: number } => ({
+  type: 'ACTION_EDIT',
+  id,
+});
+
 export default actionLogin;
