@@ -14,7 +14,8 @@ import ModalEdit from '../components/ModalEdit';
 const Wallet: React.FC = (): ReactElement => {
   const [data, setData] = useState<undefined>();
   const [value, setValue] = useState<number>(0);
-
+  sad
+  
   const [id, setId] = useState<number>(0);
   const [description, setDescription] = useState<string>('');
   const [currency, setCurrency] = useState<string>('');

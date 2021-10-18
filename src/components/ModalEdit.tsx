@@ -29,8 +29,6 @@ const ModalEdit: React.FC<TPropsFromWallet> = ({ currency }): ReactElement => {
     method,
     tag,
   };
-  
-
   const onClickAddExpenses = (): void => {
     setId((prevState) => (prevState + 1));
   };
