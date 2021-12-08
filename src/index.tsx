@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.min.css';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Provider store={store}>
       <App />
     </Provider>

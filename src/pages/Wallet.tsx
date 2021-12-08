@@ -9,7 +9,7 @@ import Table from '../components/Table';
 import fetchApi from '../services/fetch';
 import gifWallet from '../images/gifWallet.gif';
 import Form from '../components/Form';
-// import ModalEdit from '../components/ModalEdit';
+import ModalEdit from '../components/ModalEdit';
 
 const Wallet: React.FC = (): ReactElement => {
   const [data, setData] = useState<undefined>();
@@ -70,7 +70,7 @@ const Wallet: React.FC = (): ReactElement => {
   return (
     <div>
       <Header />
-      {/* <ModalEdit currency={data} /> */}
+      <ModalEdit currency={data} />
       <Toaster position="top-right" />
       <Form estados={setToState} currency={data} onClickAdd={onClickAddExpenses} />
       <Table />
