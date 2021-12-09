@@ -17,7 +17,9 @@ type ActionPayload = {
   id: number,
   payload: {
     expenses: Array<[]>,
-  }
+  },
+  idEdit: number,
+  expenses: Array<[]>,
 }
 
 const reducerLogin = (state: InitialState = INITIAL_STATE,
@@ -40,6 +42,26 @@ const reducerLogin = (state: InitialState = INITIAL_STATE,
         ...state,
         idEdit: action.id,
         editSwitch: true,
+      };
+    case 'CLOSE_MODAL':
+      return {
+        ...state,
+        editSwitch: false,
+      };
+    case 'SAVE_EDIT':
+      return {
+        ...state,
+        expenses: [
+          ...state.expenses.map((element: RootStateOrAny) => {
+            if (element.id === action.idEdit) {
+              return {
+                ...element,
+                ...action.expenses,
+              };
+            } return element;
+          }),
+        ],
+        editSwitch: false,
       };
     default:
       return state;

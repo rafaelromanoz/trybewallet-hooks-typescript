@@ -7,6 +7,7 @@ import store from './redux/store/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
