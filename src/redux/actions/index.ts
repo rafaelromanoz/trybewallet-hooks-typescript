@@ -20,6 +20,13 @@ type TExpenses = {
   tag: string,
 };
 
+type Tcurrencys = {
+  description: string,
+  currencyFind: string,
+  method: string,
+  tag: string,
+};
+
 export const addExpenses = (expenses:TExpenses):
 {type:string, payload:{expenses: TExpenses}} => ({
   type: 'ADD_EXPENSES',
@@ -33,15 +40,16 @@ export const actEdit = (id: number): {type: string, id: number } => ({
   id,
 });
 
-export const saveChangeEdit = (id: number, expenses: TExpenses):
-{type: string, expenses: TExpenses, id: number} => ({
+export const saveChangeEdit = (idEdit: number, expenses: Tcurrencys):
+{
+  type: string, expenses: Tcurrencys, idEdit: number} => ({
   type: 'SAVE_EDIT',
   expenses,
-  id,
+  idEdit,
 });
 
 export const closeModal = () : {type: string} => ({
-  type: 'CLOSE MODAL',
+  type: 'CLOSE_MODAL',
 });
 
 export default actionLogin;
