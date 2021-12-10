@@ -1,71 +1,27 @@
-<div id="top"></div>
-
-[![LinkedIn][linkedin-shield]][www.linkedin.com/in/rafaelromanz]
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="/src/images/document.jpg" alt="Logo" width="100" height="80">
-  </a>
-
-  <h3 align="center">TrybeWallet</h3>
-
-  <p align="center">
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</div>
+<span>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react shield">
+</span>
+<span>
+<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap shield">
+</span>
+<img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap shield">
+</span>
+<img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux shield">
+</span>
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="typescript">
+</span>
+<img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" alt="eslint">
+</span>
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Tabela de conteúdo</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">Sobre o projeto</a>
-      <ul>
-        <li><a href="#built-with">Tecnologias usadas</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Começando</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
-
-<!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-O projeto foi criado no intuito de itensificar os estudos de front-end utilizando React, Redux, EsLint para qualidade do código apresentado utilizando o padrão Airnb, nesse projeto possui uma tela de login e após entrar no app é possível cadastrar atividades e fazer cotações das moedas em tempo real utilizando a api https://economia.awesomeapi.com.br/json/all...continua
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+O projeto foi criado no intuito de itensificar os estudos de front-end utilizando React, Redux, EsLint para qualidade do código apresentado utilizando o padrão Airnb, esse projeto possui uma tela de login e após entrar no app é possível cadastrar atividades e fazer cotações das moedas em tempo real utilizando a api https://economia.awesomeapi.com.br/json/all...continua
 
 ### Tecnologias utilizadas
 
@@ -75,8 +31,6 @@ O projeto foi criado no intuito de itensificar os estudos de front-end utilizand
 * [Bulma](https://bulma.io/)
 * [TypeScript](https://www.typescriptlang.org/)
 * [ESLint](https://eslint.org/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Intalando dependências
 
