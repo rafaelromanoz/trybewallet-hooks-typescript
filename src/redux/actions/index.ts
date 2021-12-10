@@ -21,9 +21,11 @@ type TExpenses = {
 };
 
 type Tcurrencys = {
+  value: number,
+  id: number,
   description: string,
-  currencyFind: string,
-  method: string,
+  currency: string,
+  method:string,
   tag: string,
 };
 
