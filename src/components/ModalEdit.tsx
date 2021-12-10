@@ -4,6 +4,7 @@ import {
   Modal,
   Button,
 } from 'react-bootstrap';
+import toast from 'react-hot-toast';
 import { closeModal, saveChangeEdit } from '../redux/actions';
 
 type TPropsFromWallet = {
@@ -16,16 +17,23 @@ const ModalEdit: React.FC<TPropsFromWallet> = ({ currency }): ReactElement => {
   const [description, setDescription] = useState<string>('');
   const [method, setMethod] = useState<string>('');
   const [tag, setTag] = useState('');
-  const [currencyFind, setCurrencyFind] = useState<string>('');
+  const [coin, setCoin] = useState<string>('');
   const dispatch = useDispatch();
+  const editNotify = (): string => toast('Arquivo editado!', { icon: '📂' });
   const { editSwitch } = useSelector((state: RootStateOrAny) => state.reducerWallet);
   const { idEdit } = useSelector((state: RootStateOrAny) => state.reducerWallet);
   const objExpenses = {
     value,
+    id: idEdit,
     description,
-    currencyFind,
+    currency: coin,
     method,
     tag,
+  };
+
+  const editChanges = (): void => {
+    dispatch(saveChangeEdit(idEdit, objExpenses));
+    editNotify();
   };
 
   const methods: Array<string> = ['Dinheiro', 'Cartão de Crédito', 'Cartão de débito'];
@@ -54,7 +62,7 @@ const ModalEdit: React.FC<TPropsFromWallet> = ({ currency }): ReactElement => {
               <input
                 type="text"
                 className="input"
-                style={{ width: '100px' }}
+                style={{ width: '200px' }}
                 onChange={({ target }) => setDescription(target.value)}
               />
             </div>
@@ -64,7 +72,7 @@ const ModalEdit: React.FC<TPropsFromWallet> = ({ currency }): ReactElement => {
             <div className="control">
               <select
                 className="select"
-                onChange={({ target }) => setCurrencyFind(target.value)}
+                onChange={({ target }) => setCoin(target.value)}
               >
                 {Object.keys(currency).map((met) => <option>{met}</option>)}
               </select>
@@ -99,7 +107,7 @@ const ModalEdit: React.FC<TPropsFromWallet> = ({ currency }): ReactElement => {
           </Button>
           <Button
             variant="primary"
-            onClick={() => dispatch(saveChangeEdit(idEdit, objExpenses))}
+            onClick={() => editChanges()}
           >
             Salvar
           </Button>
