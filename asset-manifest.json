@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/trybewallet-hooks-typescript/static/css/main.a617e044.chunk.css",
-    "main.js": "/trybewallet-hooks-typescript/static/js/main.192191e4.chunk.js",
-    "main.js.map": "/trybewallet-hooks-typescript/static/js/main.192191e4.chunk.js.map",
-    "runtime-main.js": "/trybewallet-hooks-typescript/static/js/runtime-main.d19a9d86.js",
-    "runtime-main.js.map": "/trybewallet-hooks-typescript/static/js/runtime-main.d19a9d86.js.map",
-    "static/css/2.41953c31.chunk.css": "/trybewallet-hooks-typescript/static/css/2.41953c31.chunk.css",
-    "static/js/2.c30c87a5.chunk.js": "/trybewallet-hooks-typescript/static/js/2.c30c87a5.chunk.js",
-    "static/js/2.c30c87a5.chunk.js.map": "/trybewallet-hooks-typescript/static/js/2.c30c87a5.chunk.js.map",
-    "static/js/3.e87494dd.chunk.js": "/trybewallet-hooks-typescript/static/js/3.e87494dd.chunk.js",
-    "static/js/3.e87494dd.chunk.js.map": "/trybewallet-hooks-typescript/static/js/3.e87494dd.chunk.js.map",
+    "main.js": "/trybewallet-hooks-typescript/static/js/main.01e5e769.chunk.js",
+    "main.js.map": "/trybewallet-hooks-typescript/static/js/main.01e5e769.chunk.js.map",
+    "runtime-main.js": "/trybewallet-hooks-typescript/static/js/runtime-main.95a9bac0.js",
+    "runtime-main.js.map": "/trybewallet-hooks-typescript/static/js/runtime-main.95a9bac0.js.map",
+    "static/css/2.76e99cb8.chunk.css": "/trybewallet-hooks-typescript/static/css/2.76e99cb8.chunk.css",
+    "static/js/2.e1e55c6c.chunk.js": "/trybewallet-hooks-typescript/static/js/2.e1e55c6c.chunk.js",
+    "static/js/2.e1e55c6c.chunk.js.map": "/trybewallet-hooks-typescript/static/js/2.e1e55c6c.chunk.js.map",
+    "static/js/3.d23c569b.chunk.js": "/trybewallet-hooks-typescript/static/js/3.d23c569b.chunk.js",
+    "static/js/3.d23c569b.chunk.js.map": "/trybewallet-hooks-typescript/static/js/3.d23c569b.chunk.js.map",
     "index.html": "/trybewallet-hooks-typescript/index.html",
-    "static/css/2.41953c31.chunk.css.map": "/trybewallet-hooks-typescript/static/css/2.41953c31.chunk.css.map",
+    "static/css/2.76e99cb8.chunk.css.map": "/trybewallet-hooks-typescript/static/css/2.76e99cb8.chunk.css.map",
     "static/css/main.a617e044.chunk.css.map": "/trybewallet-hooks-typescript/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.c30c87a5.chunk.js.LICENSE.txt": "/trybewallet-hooks-typescript/static/js/2.c30c87a5.chunk.js.LICENSE.txt",
+    "static/js/2.e1e55c6c.chunk.js.LICENSE.txt": "/trybewallet-hooks-typescript/static/js/2.e1e55c6c.chunk.js.LICENSE.txt",
     "static/media/gifWallet.425b1e82.gif": "/trybewallet-hooks-typescript/static/media/gifWallet.425b1e82.gif",
     "static/media/wallet-page.ed9ea66e.svg": "/trybewallet-hooks-typescript/static/media/wallet-page.ed9ea66e.svg",
     "static/media/wallet.8689e39f.svg": "/trybewallet-hooks-typescript/static/media/wallet.8689e39f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d19a9d86.js",
-    "static/css/2.41953c31.chunk.css",
-    "static/js/2.c30c87a5.chunk.js",
+    "static/js/runtime-main.95a9bac0.js",
+    "static/css/2.76e99cb8.chunk.css",
+    "static/js/2.e1e55c6c.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.192191e4.chunk.js"
+    "static/js/main.01e5e769.chunk.js"
   ]
 }
